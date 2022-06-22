@@ -8,23 +8,19 @@ html,body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-
 .main-layout {
   display: flex;
   flex-direction: row;
 }
-
 nav {
   background-color: #363a45;
   height: 100vh;
   margin-right: 15px;
-  overflow-y: scroll;
+  overflow-y: auto;
   text-align: center;
   width: 250px;
 }
@@ -35,18 +31,15 @@ nav ul {
   justify-content: center;
   padding-left: 0;
 }
-
 nav li {
   list-style: none;
   margin-bottom: 10px;
 }
-
 nav li a {
   color: white;
   font-size: 1.2rem;
   text-decoration: none;
 }
-
 .nav-active {
   color: grey;
   transition: all .3s ease-out;
