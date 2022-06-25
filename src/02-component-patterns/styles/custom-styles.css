@@ -1,0 +1,18 @@
+.bg-dark {
+  background-color: rgb(56,56,56);
+}
+
+.bg-dark .product-card-title {
+  color: #fff;
+}
+
+.bg-dark .product-card-image {
+  filter:blur(.2rem);
+}
+
+.bg-dark .product-card-button div,
+.bg-dark .product-card-button button {
+  color: white;
+  font-weight: bold;
+  border-color: white;
+}
