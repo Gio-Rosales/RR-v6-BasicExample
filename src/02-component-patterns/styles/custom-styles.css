@@ -7,7 +7,7 @@
 }
 
 .bg-dark .product-card-image {
-  filter:blur(.2rem);
+  filter:blur(.01rem);
 }
 
 .bg-dark .product-card-button div,
@@ -15,4 +15,10 @@
   color: white;
   font-weight: bold;
   border-color: white;
+}
+
+.shopping-card{
+  position:fixed;
+  top: 0;
+  right: 0;
 }

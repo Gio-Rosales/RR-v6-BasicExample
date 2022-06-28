@@ -5,13 +5,11 @@ import { ProductContextProps, ProductCardProps } from '../interfaces/interfaces'
 
 import styles from '../styles/styles.module.css';
 
-const INITIAL_VALUE = 0;
-
 export const ProductContext = createContext({} as ProductContextProps);
 const { Provider } = ProductContext;
 
-export const ProductCard = ({ product, children, className, style }: ProductCardProps) => {
-  const { counter, increaseBy } = useProduct(INITIAL_VALUE);
+export const ProductCard = ({ product, children, className, style, onChange, value }: ProductCardProps) => {
+  const { counter, increaseBy } = useProduct({onChange, product, value});
 
   return (
     <Provider value={{
