@@ -1,5 +1,15 @@
-import { lazy, LazyExoticComponent } from "react";
+import { LazyExoticComponent } from "react";
 import NoLazy from '../01-lazyload/pages/NoLazy';
+import {
+  LazyLayout,
+  LazyRegister,
+  LazyFormik,
+  LazyFormikYup,
+  LazyFormikComponents,
+  LazyFormikAbstractation,
+  LazyFormikPage,
+  LazyDinamicForm
+} from '../03-forms/pages';
 
 type JSXComponent = () => JSX.Element;
 
@@ -11,20 +21,24 @@ interface Route {
   default?: boolean;
 }
 
-const LazyLayout = lazy(() => import(/* webpackChunkName: "LazyLayout" */'../01-lazyload/layout/LazyLayout'));
-const LazyRegister = lazy(() => import(/* webpackChunkName: "LazyRegister" */ '../03-forms/pages/RegisterPage'));
-const LazyFormik = lazy(() => import(/* webpackChunkName: "LazyRegister" */ '../03-forms/pages/FormikBasicPage'));
-const LazyFormikYup = lazy(() => import(/* webpackChunkName: "LazyRegister" */ '../03-forms/pages/FormikYupPage'));
-const LazyFormikComponents = lazy(() => import(/* webpackChunkName: "LazyRegister" */ '../03-forms/pages/FormikComponentsPage'));
-const LazyFormikAbstractation = lazy(() => import(/* webpackChunkName: "LazyRegister" */ '../03-forms/pages/FormikAbstraction'));
-
-
 export const routes: Route[] = [
   {
     path: '/register',
     to: '/register',
     Component: LazyRegister,
     name: 'Register Page'
+  },
+  {
+    path: '/register-formik-page',
+    to: '/register-formik-page',
+    Component: LazyFormikPage,
+    name: 'Register Formik Page'
+  },
+  {
+    path: '/dinamic-form',
+    to: '/dinamic-form',
+    Component: LazyDinamicForm,
+    name: 'Dinamic Form'
   },
   {
     path: '/register-formik',
